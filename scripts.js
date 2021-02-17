@@ -16,6 +16,13 @@ const Modal = {
             .querySelector('.modal-overlay')
             .classList
             .remove('active')
+    },
+
+    closeWarning() {
+        document
+            .querySelector('.modal-warning')
+            .classList
+            .remove('economize')
     }
 }
 
@@ -83,6 +90,11 @@ const Transaction = {
                 .querySelector('.card.total')
                 .classList
                 .add('negative')
+
+            document
+                .querySelector('.modal-warning')
+                .classList
+                .add('economize')
         } else {
             document
                 .querySelector('.card.total')

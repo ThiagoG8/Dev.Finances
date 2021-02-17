@@ -46,6 +46,13 @@ h2 {
     font-weight: normal;
 }
 
+.modal-negative h2 {
+    font-size: 30px;
+    font-weight: bold;
+
+    text-align: center;
+}
+
 /* Links and Buttons ====================== */
 a {
     color: var(--green);
@@ -259,6 +266,59 @@ td.expense {
 
     position: relative;
     z-index: 1;
+}
+
+/* Modal economize ====================== */
+.modal-warning {
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(0,0,0,0.7);
+
+    position: fixed;
+    top: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    opacity: 0;
+    visibility: hidden;
+
+    z-index: 999;
+}
+
+.modal-warning.economize {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal {
+    background: #F0F2F5;
+    padding: 2.4rem;
+    width: 90%;
+    max-width: 500px;
+
+    position: relative;
+    z-index: 1;
+}
+
+.modal-negative {
+    text-align: center;
+}
+
+.modal-negative button {
+    margin-top: 20px;
+}
+
+.modal-negative img {
+    width: 80px;
+    height: 80px;
+
+    font-weight: 100;
+
+    margin-bottom: -40px;
 }
 
 /* Formulário ====================== */
