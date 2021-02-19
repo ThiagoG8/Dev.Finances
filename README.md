@@ -14,13 +14,12 @@
 
 ## 💻 Sobre o projeto
 
-O DevFinances é um projeto que ajuda você a controlar seus gastos
+O DevFinances é um projeto que ajuda você a controlar seus gastos.
 
-## ❓ Onde eu posso testar ?
+### ❓ Onde eu posso testar ?
 
 Você pode testar [clicando aqui](https://dev-finances.thiagog8.vercel.app).
 
 ## 🤔 Como posso contribuir ?
 
-Você pode criar uma issue com uma idea ou relatando um bug
-ou criar um fork do projeto
+Você pode criar uma issue com uma idea ou relatando um bug.
