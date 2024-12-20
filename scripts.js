@@ -26,6 +26,28 @@ const Modal = {
     }
 }
 
+// muda a aplicação para dark mode
+const darkMode = {
+    toggleMode() {
+        const body = document.querySelector('body')
+        body.classList.toggle('dark')
+
+        const dark = document.querySelectorAll(
+            '.card, .card, .total, .svg, .source_code, .modal, .teste, #data-table'
+        )
+        
+        if(body.classList.contains('dark')) {
+            dark.forEach(card => {
+                card.classList.add('dark')
+            })
+        } else {
+            dark.forEach(card => {
+                card.classList.remove('dark')
+            })
+        }
+    }
+}
+
 // salva as transações no navegador
 const Storage = {
     // retornar as transações em array ou vazio se não existir transações
