@@ -40,10 +40,25 @@ const darkMode = {
             dark.forEach(card => {
                 card.classList.add('dark')
             })
+            localStorage.setItem('dev.finances:theme', 'dark')
         } else {
             dark.forEach(card => {
                 card.classList.remove('dark')
             })
+            localStorage.setItem('dev.finances:theme', 'light')
+        }
+    },
+    loadTheme() {
+        const theme = localStorage.getItem('dev.finances:theme') || 'light'
+        const body = document.querySelector('body')
+
+        if (theme == 'dark') {
+            body.classList.add('dark')
+
+            const dark = document.querySelectorAll(
+                '.card, .card, .total, .svg, .source_code, .modal, .teste, #data-table'
+            )
+            dark.forEach(card => card.classList.add('dark'))
         }
     }
 }
@@ -307,6 +322,8 @@ const App = {
         DOM.updateBalance()
 
         Storage.set(Transaction.all)
+
+        darkMode.loadTheme()
     },
 
     // recarega a aplicação para renderizar as novas transações
